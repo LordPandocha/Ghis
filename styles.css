@@ -76,3 +76,81 @@
 .contacts-bottom{margin:70px calc(clamp(22px,7.2vw,110px) * -1) 0;padding:24px clamp(22px,7.2vw,110px);display:flex;align-items:center;justify-content:space-between;gap:15px;flex-wrap:wrap;border-top:1px solid var(--line);font-size:8px;letter-spacing:.14em;color:var(--muted)}
 .contacts-bottom a{color:var(--coffee);border-bottom:1px solid #c8aaa3;padding-bottom:7px}
 @media(max-width:700px){.contacts-main{padding:100px 20px 0}.contacts-hero{grid-template-columns:1fr;gap:20px;min-height:0}.contacts-copy{padding:28px 0 15px}.contacts-copy h1{font-size:clamp(56px,14vw,78px)}.contacts-lead{margin:22px 0 28px}.contact-link{padding:18px 0}.contacts-art{height:110vw;max-height:560px;margin-left:18px}.contacts-bottom{margin:48px -20px 0;padding:22px 20px;display:grid;grid-template-columns:1fr 1fr;line-height:1.7}.contacts-bottom span:nth-child(2){text-align:right}.contacts-bottom a{grid-column:1/-1;justify-self:start;margin-top:5px}}
+
+
+/* GHIS refinement pass — coherent editorial rhythm and honest placeholders */
+:root{--milk:#f7f2eb;--rose-pale:#e9c9cc;--rose:#c68f98;--coffee:#30231f;--muted:#85766e;--line:#ded3c9;--serif:"Playfair Display",Georgia,serif;--sans:"DM Sans",Arial,sans-serif;--page:1240px}
+body{font-family:var(--sans);color:var(--coffee);background:var(--milk)}
+a,button{-webkit-tap-highlight-color:transparent}
+a:focus-visible,button:focus-visible{outline:1px solid #a86672;outline-offset:4px}
+.site-header{padding-inline:clamp(20px,5.4vw,78px);background:var(--milk);border-bottom:1px solid #ded3c966}
+.site-header.scrolled{box-shadow:0 8px 30px #30231f08}
+.desktop-nav a{transition:color .2s}
+.hero{background:#d8c7bc}
+.hero-image{animation:heroIn 1.3s cubic-bezier(.2,.7,.2,1) both}
+.hero-shade{background:linear-gradient(0deg,#2017137a 0%,#20171300 38%)}
+.hero-title{font-size:clamp(100px,18vw,250px);letter-spacing:-.075em}
+.round-link{border-bottom:1px solid #ffffffa6;padding:0 0 12px}
+.section-pad{padding-block:clamp(85px,11vw,155px)}
+.eyebrow{letter-spacing:.2em}
+.intro-line h2,.about-text h2{letter-spacing:-.045em}
+.teaser-grid{gap:clamp(12px,2vw,28px)}
+.teaser-card img{background:#e5d6cb}
+.image-caption{font-size:clamp(19px,2.4vw,30px)}
+.about-section{padding-top:clamp(60px,9vw,120px);padding-bottom:clamp(100px,13vw,175px)}
+.about-visual{background:#e5d6cb}
+.about-text{max-width:500px}
+.services-section{padding-top:0}
+.story-list{border-top:1px solid var(--line)}
+.story{border-bottom:1px solid var(--line)}
+.booking-section{background:#59453d}
+.booking-overlay{background:linear-gradient(90deg,#241913c9 0%,#24191355 58%,#24191315 100%)}
+.button-light{font-weight:500}
+.site-footer{border-top:1px solid var(--line)}
+/* Catalog: no hidden titles, no dark gradient pretending the placeholders are photos */
+.portfolio-main{max-width:1600px;margin-inline:auto}
+.portfolio-heading{max-width:1240px;margin-inline:auto;padding-top:14px}
+.portfolio-heading h1{max-width:1100px}
+.portfolio-lead{font-size:13px;max-width:500px}
+.filters-wrap{border-bottom:1px solid var(--line);box-shadow:0 10px 24px #30231f04}
+.portfolio-grid{gap:clamp(18px,2.4vw,34px);padding-top:38px}
+.work-card{gap:13px}
+.work-card img{background:#e7d9cf;transition:transform .7s cubic-bezier(.2,.7,.2,1),filter .35s}
+.work-card:hover img{transform:scale(1.018);filter:saturate(1.03)}
+.work-meta{gap:8px}
+.work-meta small{font-size:9px;letter-spacing:.16em;line-height:1.5}
+.work-meta b,.work-card:hover .work-meta b,.work-card:focus-visible .work-meta b{opacity:1;max-height:none;font-size:clamp(17px,2vw,25px);line-height:1.2}
+.work-card:nth-child(3n+2){margin-top:70px}
+.work-card:nth-child(3n){margin-top:22px}
+.work-large img{aspect-ratio:.82}
+.work-tall img{aspect-ratio:.7}
+.work-small img{aspect-ratio:.8}
+.work-card[hidden]{display:none!important}
+.portfolio-bottom{padding-top:24px;border-top:1px solid var(--line)}
+.economy-toggle{border-bottom:1px solid transparent}
+.economy-toggle:hover{border-color:var(--rose)}
+.viewer{background:#201916fa}
+.viewer-image{box-shadow:none}
+.viewer-caption{max-width:420px}
+.contacts-main{max-width:1600px;margin-inline:auto}
+.contacts-art{background:#e5d6cb}
+@media(max-width:700px){
+ .site-header{background:var(--milk)}
+ .hero{min-height:560px}
+ .hero-title{font-size:clamp(92px,23vw,150px)}
+ .section-pad{padding-block:76px}
+ .teaser-grid{gap:10px}
+ .image-caption{font-size:18px}
+ .portfolio-main{padding-top:96px}
+ .portfolio-heading h1{font-size:clamp(58px,15vw,90px)}
+ .filters-wrap{box-shadow:0 7px 18px #30231f05}
+ .portfolio-grid{gap:22px 12px;padding-top:24px}
+ .work-card,.work-large,.work-tall,.work-small{margin-top:0}
+ .work-card:nth-child(3n+1){margin-top:0}
+ .work-card:nth-child(3n+2),.work-card:nth-child(3n){margin-top:18px}
+ .work-card img,.work-large img,.work-tall img,.work-small img{aspect-ratio:.68}
+ .work-card:nth-child(4n) img{aspect-ratio:.82}
+ .work-meta b,.work-card:hover .work-meta b,.work-card:focus-visible .work-meta b{font-size:17px}
+ .work-meta small{font-size:7px}
+ .booking-overlay{background:linear-gradient(0deg,#241913d1 0%,#24191335 75%)}
+}
