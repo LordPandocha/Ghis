@@ -154,3 +154,23 @@ a:focus-visible,button:focus-visible{outline:1px solid #a86672;outline-offset:4p
  .work-meta small{font-size:7px}
  .booking-overlay{background:linear-gradient(0deg,#241913d1 0%,#24191335 75%)}
 }
+
+
+/* Home hero header sits on the portrait, then becomes a quiet milk navigation on scroll */
+body.home .site-header{position:fixed;inset:0 0 auto;z-index:35;background:transparent;border-bottom-color:transparent;box-shadow:none;color:#fff;transition:background .3s,color .3s,border-color .3s,height .3s}
+body.home .site-header .wordmark,body.home .site-header .desktop-nav a{color:#fff}
+body.home .site-header .desktop-nav a:hover{color:#f0d4d5}
+body.home .site-header .header-telegram{background:#f7f2eb12;border-color:#ffffffa8;color:#fff}
+body.home .site-header .header-telegram:hover{background:var(--rose-pale);border-color:var(--rose-pale);color:var(--coffee)}
+body.home .site-header .menu-toggle i{background:#fff}
+body.home .site-header.scrolled{background:#f7f2ebf5;border-bottom-color:var(--line);backdrop-filter:blur(16px);box-shadow:0 8px 30px #30231f08;color:var(--coffee)}
+body.home .site-header.scrolled .wordmark,body.home .site-header.scrolled .desktop-nav a{color:var(--coffee)}
+body.home .site-header.scrolled .desktop-nav a:hover{color:#a86672}
+body.home .site-header.scrolled .header-telegram{background:var(--rose-pale);border-color:var(--rose-pale);color:var(--coffee)}
+body.home .site-header.scrolled .menu-toggle i{background:var(--coffee)}
+body.home .hero{margin-top:0}
+@media(max-width:700px){
+ body.home .site-header{height:70px;background:linear-gradient(180deg,#24191355,transparent);border:0}
+ body.home .site-header.scrolled{height:62px;background:#f7f2ebf5;border-bottom:1px solid var(--line)}
+ body.home .site-header.scrolled .header-telegram{background:var(--rose-pale);color:var(--coffee)}
+}
