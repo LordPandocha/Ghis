@@ -1,134 +1,30 @@
 <!doctype html>
 <html lang="ru">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#171414">
-  <meta name="description" content="Кристина — визажист и мастер причёсок в Южно-Сахалинске. Макияж для особенных событий, свадебные и вечерние образы.">
-  <title>Кристина Анисимова — визажист в Южно-Сахалинске</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
-  <style>
-    :root{--bg:#171414;--panel:#211b1b;--text:#f7f0ed;--muted:#b8aaa6;--rose:#d9a9a4;--line:#463735;--max:1160px}
-    *{box-sizing:border-box} html{scroll-behavior:smooth} body{margin:0;background:var(--bg);color:var(--text);font-family:Manrope,Arial,sans-serif}
-    a{color:inherit;text-decoration:none} img{display:block;width:100%;height:100%;object-fit:cover}
-    .wrap{width:min(var(--max),calc(100% - 44px));margin:auto}
-    header{position:absolute;top:0;left:0;right:0;z-index:5;border-bottom:1px solid #ffffff22}
-    .nav{height:82px;display:flex;align-items:center;justify-content:space-between;gap:24px}
-    .brand{font-size:13px;letter-spacing:.23em;text-transform:uppercase;font-weight:700}.brand span{display:block;color:var(--rose);font-size:10px;letter-spacing:.28em;margin-top:5px}
-    .navlinks{display:flex;align-items:center;gap:28px;font-size:12px;color:#e0d6d2}.navlinks a:hover{color:var(--rose)}
-    .navcta,.button{display:inline-flex;align-items:center;justify-content:center;border:1px solid var(--rose);padding:14px 20px;font-size:11px;letter-spacing:.1em;text-transform:uppercase;transition:.25s}
-    .navcta:hover,.button:hover{background:var(--rose);color:#211717}
-    .hero{min-height:760px;display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:50px;padding:125px 0 70px;background:radial-gradient(ellipse at 78% 45%,#68413b 0%,#2b2020 30%,#171414 70%)}
-    .eyebrow{color:var(--rose);font-size:10px;letter-spacing:.25em;text-transform:uppercase;display:flex;align-items:center;gap:12px}.eyebrow:before{content:"";width:32px;height:1px;background:var(--rose)}
-    h1,h2{font-family:"Playfair Display",Georgia,serif;font-weight:400;line-height:1.04;margin:22px 0}
-    h1{font-size:clamp(48px,6.5vw,88px);letter-spacing:-.04em} h1 em{font-weight:400;color:var(--rose)}
-    .lead{font-size:15px;line-height:1.9;color:#c8bbb6;max-width:430px;margin:24px 0 32px}
-    .hero-actions{display:flex;flex-wrap:wrap;gap:12px}.button.filled{background:var(--rose);color:#211717}.button.filled:hover{background:#f0c8c0}
-    .hero-note{margin-top:42px;color:#9d8e89;font-size:10px;letter-spacing:.14em;text-transform:uppercase}
-    .hero-art{height:540px;position:relative;display:flex;align-items:center;justify-content:center}
-    .hero-frame{position:absolute;width:76%;height:91%;right:8%;top:2%;border:1px solid #d9a9a466;transform:rotate(4deg)}
-    .hero-photo{position:relative;width:78%;height:88%;z-index:1;overflow:hidden;background:#322525}
-    .hero-photo img{filter:saturate(.8);object-position:center}
-    .hero-stamp{position:absolute;z-index:2;left:0;bottom:24px;border:1px solid #d9a9a477;background:#171414e8;padding:20px 24px;max-width:185px}
-    .hero-stamp strong{display:block;font-family:"Playfair Display",serif;font-size:25px;font-weight:400}.hero-stamp small{display:block;color:var(--muted);font-size:9px;letter-spacing:.12em;margin-top:8px;text-transform:uppercase}
-    section{padding:105px 0}.section-head{display:flex;justify-content:space-between;align-items:end;gap:30px;margin-bottom:42px}
-    h2{font-size:clamp(38px,5vw,60px);margin:14px 0 0}.section-desc{color:var(--muted);font-size:13px;line-height:1.8;max-width:350px}
-    .portfolio{background:#211b1b}.gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
-    .shot{position:relative;aspect-ratio: .82;overflow:hidden;background:#382b2b}.shot:nth-child(2){margin-top:40px}.shot:nth-child(5){margin-top:40px}
-    .shot img{transition:transform .7s cubic-bezier(.2,.7,.2,1);filter:saturate(.85)}.shot:hover img{transform:scale(1.045)}
-    .shot:after{content:"";position:absolute;inset:45% 0 0;background:linear-gradient(transparent,#160f0fd9)}
-    .shot-label{position:absolute;z-index:1;left:18px;bottom:18px;font-size:10px;letter-spacing:.15em;text-transform:uppercase}
-    .services{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line);margin-top:40px}
-    .service{background:var(--bg);padding:30px 27px;min-height:220px}.service-number{font-size:10px;color:var(--rose);letter-spacing:.18em}.service h3{font-family:"Playfair Display",serif;font-size:26px;font-weight:400;margin:26px 0 12px}.service p{color:var(--muted);font-size:12px;line-height:1.8;margin:0}
-    .about{display:grid;grid-template-columns:.8fr 1.2fr;gap:90px;align-items:center}.about-card{padding:45px;border:1px solid var(--line);background:linear-gradient(140deg,#302222,#1b1717);min-height:330px;display:flex;flex-direction:column;justify-content:space-between}
-    .monogram{font-family:"Playfair Display",serif;font-size:110px;color:#d9a9a422;line-height:.8}.about-quote{font-family:"Playfair Display",serif;font-size:27px;line-height:1.35}
-    .about-copy p{font-size:13px;line-height:2;color:var(--muted);max-width:560px}.about-copy .signature{font-family:"Playfair Display",serif;font-size:28px;color:var(--rose);margin-top:25px}
-    .booking{padding:0 0 105px}.booking-inner{padding:58px;display:flex;justify-content:space-between;align-items:center;gap:35px;background:linear-gradient(110deg,#3a2827,#211919);border:1px solid #634543}
-    .booking h2{max-width:600px}.booking p{font-size:13px;color:#c8b9b4;line-height:1.8;max-width:480px}
-    footer{border-top:1px solid var(--line);padding:28px 0;color:#9c8d88;font-size:10px;letter-spacing:.08em}.foot{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
-    .mobile-menu{display:none}
-    @media(max-width:760px){.wrap{width:min(100% - 32px,var(--max))}.nav{height:70px}.navlinks{display:none}.navcta{padding:11px 13px;font-size:9px}.hero{grid-template-columns:1fr;gap:22px;padding:130px 0 48px;min-height:0}.hero-copy{order:1}.hero-art{order:0;height:350px;width:100%}.hero-photo{width:65%;height:95%;right:-5%}.hero-frame{width:64%;height:95%;right:7%}.hero-stamp{left:2%;bottom:10px;padding:14px}.hero-stamp strong{font-size:20px}h1{font-size:58px;margin:17px 0}.lead{font-size:13px;margin:18px 0 24px}.hero-note{margin-top:26px}section{padding:70px 0}.section-head{display:block}.section-desc{margin-top:20px}.gallery{gap:8px}.shot{aspect-ratio:.72}.shot:nth-child(2),.shot:nth-child(5){margin-top:22px}.shot-label{left:9px;bottom:10px;font-size:8px}.services{grid-template-columns:1fr}.service{min-height:0;padding:24px}.service h3{margin:14px 0 8px}.about{grid-template-columns:1fr;gap:28px}.about-card{min-height:230px;padding:28px}.monogram{font-size:75px}.about-quote{font-size:23px}.booking{padding-bottom:70px}.booking-inner{padding:28px;display:block}.booking .button{margin-top:12px}.foot{display:block}.foot span{display:block;margin:8px 0}}
-    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition:none!important}}
-  </style>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#f7f2eb">
+<meta name="description" content="GHIS — макияж и причёски. Портфолио Кристины Анисимовой.">
+<title>GHIS — Кристина Анисимова</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;1,400;1,500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css"><script src="script.js" defer></script>
 </head>
-<body>
-<header>
-  <div class="wrap nav">
-    <a class="brand" href="#top">Kristina Anisimova<span>Makeup · Hair</span></a>
-    <nav class="navlinks" aria-label="Главное меню">
-      <a href="#portfolio">Портфолио</a><a href="#services">Услуги</a><a href="#about">Обо мне</a>
-    </nav>
-    <a class="navcta" href="#booking">Записаться ↗</a>
-  </div>
-</header>
+<body class="home">
+<div class="intro" aria-hidden="true"><span>G</span><span>H</span><span>I</span><span>S</span></div>
+<header class="site-header"><a class="wordmark" href="index.html" aria-label="GHIS — главная">GHIS</a>
+<nav class="desktop-nav" aria-label="Главная навигация"><a href="portfolio.html">Работы</a><a href="#about">Обо мне</a><a href="#services">Услуги</a><a href="#contacts">Контакты</a></nav>
+<a class="header-telegram" href="https://t.me/anisimova_65" target="_blank" rel="noopener">Telegram <span>↗</span></a>
+<button class="menu-toggle" aria-label="Открыть меню" aria-expanded="false"><i></i><i></i></button></header>
+<div class="mobile-menu" aria-hidden="true"><button class="menu-close">ЗАКРЫТЬ <span>×</span></button><nav><a href="portfolio.html">Работы <sup>01</sup></a><a href="#about">Обо мне <sup>02</sup></a><a href="#services">Услуги <sup>03</sup></a><a href="#contacts">Контакты <sup>04</sup></a></nav><p>МАКИЯЖ · ПРИЧЁСКИ · GHIS</p></div>
 <main id="top">
-  <div class="wrap hero">
-    <div class="hero-copy">
-      <div class="eyebrow">Визажист · Южно-Сахалинск</div>
-      <h1>Твоя красота.<br><em>Твой акцент.</em></h1>
-      <p class="lead">Макияж и причёски, которые подчёркивают именно тебя. Для особенных событий, важных встреч и дней, когда хочется чувствовать себя на высоте.</p>
-      <div class="hero-actions">
-        <a class="button filled" href="https://t.me/anisimova_65" target="_blank" rel="noopener">Обсудить образ ↗</a>
-        <a class="button" href="#portfolio">Смотреть работы</a>
-      </div>
-      <div class="hero-note">Индивидуальный подход · Внимание к деталям</div>
-    </div>
-    <div class="hero-art" aria-label="Примеры макияжа">
-      <div class="hero-frame"></div>
-      <div class="hero-photo"><img src="assets/makeup-red-lips.jpg" alt="Вечерний макияж с акцентом на губы"></div>
-      <div class="hero-stamp"><strong>Make it<br>personal.</strong><small>Beauty is in the details</small></div>
-    </div>
-  </div>
-
-  <section class="portfolio" id="portfolio">
-    <div class="wrap">
-      <div class="section-head">
-        <div><div class="eyebrow">Избранные работы</div><h2>Красота в деталях</h2></div>
-        <p class="section-desc">От нежного сияния до выразительных вечерних образов. Найдём настроение, которое подходит именно тебе.</p>
-      </div>
-      <div class="gallery">
-        <div class="shot"><img src="assets/makeup-soft.jpg" alt="Мягкий вечерний макияж" loading="lazy"><span class="shot-label">Soft glam</span></div>
-        <div class="shot"><img src="assets/makeup-red-lips.jpg" alt="Макияж с красной помадой" loading="lazy"><span class="shot-label">Evening look</span></div>
-        <div class="shot"><img src="assets/makeup-eyes.jpg" alt="Детали макияжа глаз и бровей" loading="lazy"><span class="shot-label">Eye details</span></div>
-        <div class="shot"><img src="assets/makeup-editorial.jpg" alt="Выразительный editorial-образ" loading="lazy"><span class="shot-label">Editorial</span></div>
-        <div class="shot"><img src="assets/portrait-beauty.jpg" alt="Бьюти-портрет с акцентом на макияж" loading="lazy"><span class="shot-label">Beauty portrait</span></div>
-        <div class="shot"><img src="assets/makeup-soft.jpg" alt="Вариант макияжа для вдохновения" loading="lazy"><span class="shot-label">Your mood</span></div>
-      </div>
-    </div>
-  </section>
-
-  <section id="services">
-    <div class="wrap">
-      <div class="eyebrow">Что можно создать</div><h2>Образ под твой повод</h2>
-      <div class="services">
-        <article class="service"><span class="service-number">01 / MAKEUP</span><h3>Макияж</h3><p>Дневной, вечерний или выразительный макияж с учётом черт лица, пожеланий и формата события.</p></article>
-        <article class="service"><span class="service-number">02 / BRIDAL</span><h3>Свадебный образ</h3><p>Продуманный образ для важного дня — гармоничный, фотогеничный и комфортный на протяжении праздника.</p></article>
-        <article class="service"><span class="service-number">03 / HAIR</span><h3>Причёски</h3><p>Укладки и причёски, которые дополнят макияж и соберут образ в единую красивую историю.</p></article>
-      </div>
-    </div>
-  </section>
-
-  <section id="about">
-    <div class="wrap about">
-      <div class="about-card"><div class="monogram">K.</div><div class="about-quote">«Не менять тебя —<br>а подчеркнуть твоё».</div></div>
-      <div class="about-copy"><div class="eyebrow">Давай знакомиться</div><h2>Привет, я Кристина</h2>
-        <p>Я визажист и мастер причёсок в Южно-Сахалинске. В работе для меня важны детали, настроение и то, как ты ощущаешь себя в готовом образе.</p>
-        <p>Расскажи, куда собираешься и какой результат представляешь — вместе подберём подходящий вариант. Можно прислать референсы и обсудить всё заранее.</p>
-        <div class="signature">Буду рада знакомству ♡</div>
-      </div>
-    </div>
-  </section>
-
-  <section class="booking" id="booking">
-    <div class="wrap booking-inner">
-      <div><div class="eyebrow">Запись и вопросы</div><h2>Создадим твой образ?</h2><p>Напиши мне, укажи дату и повод — обсудим пожелания, свободное время и стоимость.</p></div>
-      <a class="button filled" href="https://t.me/anisimova_65" target="_blank" rel="noopener">Написать в Telegram ↗</a>
-    </div>
-  </section>
-</main>
-<footer><div class="wrap foot"><span>© <span id="year"></span> KRISTINA ANISIMOVA</span><span>ВИЗАЖИСТ · ПРИЧЁСКИ · ЮЖНО-САХАЛИНСК</span><span><a href="https://vk.com/anisimovakristi" target="_blank" rel="noopener">VK ↗</a> &nbsp;·&nbsp; <a href="https://t.me/anisimova_65" target="_blank" rel="noopener">Telegram ↗</a></span></div></footer>
-<script>document.getElementById('year').textContent=new Date().getFullYear();</script>
-</body>
-</html>
+<section class="hero" aria-label="GHIS beauty"><img class="hero-image" src="makeup-editorial.jpg" alt="Бьюти-образ из портфолио" fetchpriority="high"><div class="hero-shade"></div>
+<div class="hero-top"><span class="hero-kicker">MAKEUP · HAIR · BEAUTY</span><span class="hero-location">ЮЖНО-САХАЛИНСК</span></div>
+<div class="hero-bottom"><h1 class="hero-title">GHIS</h1><a class="round-link" href="portfolio.html"><span>Смотреть<br>портфолио</span><b>↗</b></a></div><div class="hero-index">01 — 04</div></section>
+<section class="teaser section-pad" id="works"><div class="section-intro reveal"><p class="eyebrow">ИЗБРАННОЕ / WORKS</p><div class="intro-line"><h2>Красота —<br><em>в деталях.</em></h2><a class="text-link" href="portfolio.html">Все работы <span>↗</span></a></div></div>
+<div class="teaser-grid"><a class="teaser-card card-tall reveal" href="portfolio.html"><img src="makeup-soft.jpg" alt="Нежный макияж" loading="lazy"><span class="image-caption"><small>01 / SOFT</small>Мягкое сияние</span></a><a class="teaser-card card-wide reveal" href="portfolio.html"><img src="makeup-red-lips.jpg" alt="Образ с акцентом на губы" loading="lazy"><span class="image-caption"><small>02 / EVENING</small>Смелый акцент</span></a><a class="teaser-card card-small reveal" href="portfolio.html"><img src="makeup-eyes.jpg" alt="Детали макияжа глаз" loading="lazy"><span class="image-caption"><small>03 / DETAILS</small>Взгляд</span></a></div>
+</section>
+<section class="about-section section-pad" id="about"><div class="about-visual reveal"><img src="portrait-beauty.jpg" alt="Бьюти-портрет" loading="lazy"><span class="vertical-note">GHIS — BEAUTY, FEELING, YOU</span></div><div class="about-text reveal"><p class="eyebrow">НЕСКОЛЬКО СЛОВ ОБО МНЕ</p><h2>Красота начинается<br>с ощущения <em>себя.</em></h2><p class="about-name">Кристина Анисимова</p><p class="about-placeholder">Здесь будет мой рассказ о себе, подходе к работе и том, как мы вместе найдём твой образ.</p><a class="text-link" href="https://www.instagram.com/mua.anisimova/" target="_blank" rel="noopener">Instagram <span>↗</span></a></div></section>
+<section class="services-section section-pad" id="services"><div class="section-intro reveal"><p class="eyebrow">ВИЗУАЛЬНЫЕ ИСТОРИИ / SERVICES</p><div class="intro-line"><h2>Настроение<br><em>образа.</em></h2><p class="section-note">Каждая деталь — часть твоей истории.</p></div></div>
+<div class="story-list"><article class="story reveal"><img src="makeup-soft.jpg" alt="Мягкий бьюти-образ" loading="lazy"><div><span>01</span><h3>Мягкость</h3><p>Место для описания образа</p></div></article><article class="story reveal"><img src="makeup-red-lips.jpg" alt="Выразительный образ" loading="lazy"><div><span>02</span><h3>Акцент</h3><p>Место для описания образа</p></div></article><article class="story reveal"><img src="makeup-eyes.jpg" alt="Макияж глаз" loading="lazy"><div><span>03</span><h3>Детали</h3><p>Место для описания образа</p></div></article></div></section>
+<section class="booking-section" id="contacts"><img src="portrait-beauty.jpg" alt="" loading="lazy"><div class="booking-overlay"></div><div class="booking-copy reveal"><p class="eyebrow">ТВОЯ ИСТОРИЯ МОЖЕТ НАЧАТЬСЯ ЗДЕСЬ</p><h2>Давай создадим<br><em>твой образ.</em></h2><button class="button button-light contact-reveal" aria-expanded="false">Записаться <span>↗</span></button><div class="contact-options" hidden><a href="https://t.me/anisimova_65" target="_blank" rel="noopener">Написать в Telegram ↗</a><a href="https://www.instagram.com/mua.anisimova/" target="_blank" rel="noopener">Instagram ↗</a></div></div><span class="booking-label">GHIS / CONTACT</span></section>
+</main><footer class="site-footer"><a class="wordmark" href="#top">GHIS</a><span>Кристина Анисимова</span><a href="https://www.instagram.com/mua.anisimova/" target="_blank" rel="noopener">INSTAGRAM ↗</a><small>© <span data-year></span> GHIS</small></footer>
+</body></html>
