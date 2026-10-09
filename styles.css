@@ -83,3 +83,52 @@ body{animation:page-enter .7s var(--ease-editorial) both}
 .hero .photo-placeholder{animation:placeholder-breathe 12s ease-in-out infinite alternate}
 @keyframes placeholder-breathe{from{background-position:0% 50%}to{background-position:100% 50%}}
 @media(prefers-reduced-motion:reduce){.motion-enabled .motion-item,.motion-enabled .motion-item.in-view{opacity:1;transform:none;transition:none}.hero .photo-placeholder{animation:none}}
+
+/* Requested GHIS opening layout and social-link cards */
+.hero-intro{height:auto;min-height:790px;max-height:none;padding-top:125px;padding-bottom:28px;justify-content:initial}
+.hero-intro:before{display:none}
+.hero-intro .hero-kicker{color:var(--muted);border-bottom:1px solid #ded3c9;padding-bottom:15px}
+.hero-split{display:grid;grid-template-columns:minmax(0,1fr) minmax(340px,.98fr);align-items:center;gap:clamp(35px,7vw,100px);flex:1;padding:clamp(50px,8vw,100px) 0}
+.hero-intro .hero-title{margin:0;max-width:620px;color:var(--brown)}
+.hero-intro .hero-brand{font-size:9px;letter-spacing:.19em;color:var(--muted);margin:0 0 25px}
+.hero-intro .hero-title h1{font-size:clamp(56px,7vw,100px);line-height:.99;letter-spacing:-.065em;margin:0 0 24px}
+.hero-intro .hero-title h1 em{color:var(--rose-deep);display:inline-block}
+.hero-intro .hero-title>p:not(.hero-brand){color:var(--muted);font-size:12px;line-height:1.9;max-width:350px;margin:0 0 24px}
+.hero-contact-link{display:inline-flex;gap:30px;align-items:center;border-bottom:1px solid #c6b5a8;padding:0 0 10px;font-size:10px;transition:gap .25s}
+.hero-contact-link:hover{gap:38px}
+.hero-intro .hero-image{position:relative;inset:auto;width:100%;height:auto;aspect-ratio:.88;border-radius:30px;background:linear-gradient(145deg,#e9c9cc,#c68f98 54%,#ded0c4);box-shadow:0 25px 65px #30231f18}
+.hero-intro .hero-image:before{border-color:#f7f2eb99}
+.hero-intro .hero-bottom{color:var(--muted);border-color:var(--line)}
+.social-booking{display:grid;grid-template-columns:.8fr 1.2fr;align-items:center;gap:50px}
+.social-heading{position:relative;z-index:1}
+.social-heading h2{font-size:clamp(44px,5.5vw,75px)}
+.social-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;position:relative;z-index:1}
+.social-card{position:relative;display:flex;flex-direction:column;justify-content:space-between;gap:30px;min-height:150px;padding:20px;border:1px solid #f7f2eb3d;border-radius:18px;transition:background .3s,transform .3s,border-color .3s;overflow:hidden}
+.social-card:hover{background:#ffffff0d;border-color:#e9c9cc8a;transform:translateY(-4px)}
+.social-card>span{font-size:8px;letter-spacing:.15em;color:#cdbcb3}
+.social-card strong{font:400 clamp(24px,2.5vw,35px) var(--serif);font-weight:400}
+.social-card>b{position:absolute;right:19px;bottom:20px;font-size:17px;font-weight:400;color:var(--rose)}
+.social-card strong small{display:block;margin-top:7px;font:500 8px var(--sans);letter-spacing:.12em;color:var(--rose)}
+.placeholder-link{border-style:dashed}
+.placeholder-link:hover{cursor:default}
+@media(max-width:760px){
+ .hero-intro{min-height:0;height:auto;padding:94px 20px 24px}
+ .hero-intro .hero-kicker{font-size:8px;gap:10px}
+ .hero-split{grid-template-columns:minmax(0,1fr) minmax(0,.82fr);gap:15px;padding:45px 0 38px;align-items:center}
+ .hero-intro .hero-title h1{font-size:clamp(38px,8.5vw,64px);line-height:1.02}
+ .hero-intro .hero-brand{font-size:7px;margin-bottom:15px}
+ .hero-intro .hero-title>p:not(.hero-brand){font-size:10px;line-height:1.7}
+ .hero-intro .hero-image{inset:auto;width:100%;height:auto;aspect-ratio:.72;border-radius:20px}
+ .hero-intro .placeholder-center{font-size:clamp(19px,4vw,28px)}
+ .hero-intro .placeholder-center small{font-size:6px;letter-spacing:.1em}
+ .hero-intro .hero-image .image-tag{right:8px;bottom:8px;font-size:6px;padding:7px}
+ .hero-intro .placeholder-number{top:12px;left:12px}
+ .hero-intro .hero-bottom{font-size:7px}
+ .social-booking{display:block}
+ .social-heading h2{font-size:clamp(43px,11vw,65px)}
+ .social-grid{margin-top:28px;gap:9px}
+ .social-card{padding:15px;min-height:125px;border-radius:14px;gap:22px}
+ .social-card strong{font-size:24px}
+ .social-card>span{font-size:7px}
+}
+@media(max-width:390px){.hero-split{grid-template-columns:1fr}.hero-intro .hero-image{aspect-ratio:1.05;max-height:340px}.hero-intro .hero-title h1{font-size:56px}.hero-intro .hero-title{order:0}.hero-intro .hero-image{order:1}}
