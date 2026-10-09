@@ -38,3 +38,13 @@
  .work-meta b{opacity:1;max-height:3em;font-size:17px}
 }
 @media(prefers-reduced-motion:reduce){.work-meta b{transition:none}}
+
+/* Button system: clear primary action, restrained editorial controls */
+.header-telegram{border:1px solid var(--rose);background:var(--rose-pale);padding:12px 15px;color:var(--coffee);border-radius:0;line-height:1;gap:12px}
+.header-telegram:hover{background:var(--coffee);border-color:var(--coffee);color:var(--milk)}
+.header-telegram span{font-size:14px}
+.round-link{min-width:150px;justify-content:space-between}
+.button-light{min-width:205px}
+.filter:active{transform:scale(.98)}
+.economy-toggle:focus-visible,.viewer-details:focus-visible,.menu-close:focus-visible{outline:1px solid var(--rose);outline-offset:4px}
+@media(max-width:700px){.header-telegram{padding:10px 11px;font-size:9px;gap:7px}.header-telegram span{font-size:13px}.round-link{min-width:125px}.button-light{min-width:190px}}
